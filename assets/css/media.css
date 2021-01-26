@@ -1,0 +1,98 @@
+@media screen and (max-width: 1110px) {
+  .sub-sub-header-menu {
+    left: -195px; }
+  .logo {
+    margin: 0 15px; } }
+
+@media screen and (max-width: 1060px) {
+  .header-content {
+    padding: 30px 0; } }
+
+@media screen and (max-width: 767px) {
+  .content {
+    padding: 0 10px; }
+  .header_wrapper {
+    background-color: white;
+    z-index: 3;
+    position: relative; }
+  .burger-menu {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    margin-right: 20px;
+    margin-left: auto;
+    cursor: pointer; }
+    .burger-menu::after, .burger-menu::before {
+      content: "";
+      background-color: #7d7d7d;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      transition: all 0.3s ease-in-out; }
+    .burger-menu::before {
+      top: 0; }
+    .burger-menu::after {
+      bottom: 0; }
+    .burger-menu span {
+      background-color: #7d7d7d;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      top: 9px;
+      transition: all 0.3s ease-in-out; }
+  .burger-menu.bgr-active::before {
+    transform: rotate(45deg);
+    top: 9px; }
+  .burger-menu.bgr-active::after {
+    transform: rotate(-45deg);
+    bottom: 9px; }
+  .burger-menu.bgr-active span {
+    transform: scale(0); }
+  .header-navigation-wrapper {
+    background-color: #3f5b2c;
+    position: absolute;
+    max-width: 100%;
+    width: 100%;
+    top: 90px;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out; }
+    .header-navigation-wrapper .header-nav {
+      display: block; }
+    .header-navigation-wrapper.bgr-active {
+      opacity: 1;
+      visibility: visible; }
+    .header-navigation-wrapper .nav-items {
+      color: #fff;
+      border: 1px solid transparent;
+      padding: 10px 4px;
+      transition: border 0.5s ease-in-out; }
+      .header-navigation-wrapper .nav-items:hover {
+        border: 1px solid rgba(101, 121, 88, 0.4); }
+      .header-navigation-wrapper .nav-items a {
+        text-align: center;
+        max-width: 100%;
+        display: block; }
+  .arrow-add::after {
+    right: 10px;
+    top: 10px; }
+  .sub-header-menu {
+    position: relative;
+    min-width: 100%;
+    left: 0;
+    top: 0; }
+  .sub-sub-header-menu {
+    position: relative;
+    min-width: 100%;
+    left: 0;
+    top: 0; }
+  .post-mover-wrap .post-mover {
+    display: block; }
+    .post-mover-wrap .post-mover .left-move {
+      margin-bottom: 20px; }
+    .post-mover-wrap .post-mover .right-move {
+      margin-top: 20px; } }

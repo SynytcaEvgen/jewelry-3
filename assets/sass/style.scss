@@ -1,0 +1,544 @@
+$playfair_regular: "PlayfairDisplay-Regular", sans-serif;
+$playfair_regular-ital: "PlayfairDisplay-Italic", sans-serif;
+$playfair_bold: "PlayfairDisplay-Bold", sans-serif;
+$playfair_bold-ital: "Playfair Display-Bold-Italic", sans-serif;
+$playfair_black: "Playfair Display Black", sans-serif;
+$playfair_black-ital: "Playfair Display Black-Italic", sans-serif;
+$lato_regular: "Lato-Regular", sans-serif;
+$lato_regular-ital: "Lato-Italic", sans-serif;
+/*--fonts--*/
+$font-size-header: 12px;
+$font-size-social: 11px;
+$font-size-qoute: 19px;
+$font-size-logo: 30px;
+$font-size-text: 15px;
+$color_accent: #657958;
+$color_line: rgba(101, 121, 88, 0.4);
+$color_second: #a7be98;
+$color-decoration-line: #c1cdb7;
+$background_color: #3f5b2c;
+$background_color_post: #f5f3f1;
+$backfround_sende_menu: #3f5a2f;
+$nunber_active: #f5f4f2;
+$color_heading: #262626;
+$color_text: #7d7d7d;
+$color_link: #1f3315;
+$color_white: #fff;
+/*--Header style--*/
+.content-head-width {
+  max-width: 1036px;
+  margin: 0 auto;
+}
+.content-width {
+  max-width: 675px;
+  margin: 0 auto;
+}
+.header_wrapper {
+  max-height: 119px;
+  font-family: $playfair_regular;
+  color: $color_text;
+}
+.header-content {
+  display: block;
+  position: relative;
+  padding: 48px 0;
+}
+.logo {
+  position: relative;
+  .logo_first,
+  .logo_second {
+    position: absolute;
+    font-size: $font-size-logo;
+  }
+  .logo_first {
+    font-family: $playfair_bold-ital;
+    color: $color_accent;
+    top: -($font-size-logo / 2) - 5px;
+    font-size: 36px;
+  }
+  .logo_second {
+    font-family: $playfair_black;
+    color: $color_second;
+    top: -($font-size-logo / 2) + 3px;
+    left: 13px;
+    font-style: normal;
+  }
+}
+
+.header-navigation-wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .nav-items {
+    position: relative;
+  }
+  .nav-items > a {
+    font-size: $font-size-header;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: 2px;
+  }
+}
+.sub-header-menu {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background-color: $background_color;
+  padding: 13px;
+  min-width: 180px;
+  .sub-menu-items {
+    position: relative;
+    color: $color_white;
+    &.arrow-sub::after {
+      content: "";
+      width: 11px;
+      height: 5px;
+      position: absolute;
+      top: 14px;
+      right: 5px;
+      background-image: url(/wordpress/wp-content/themes/jewelry-3/assets/images/arrow-sub.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    &.arrow-sub.arrow-active::after {
+      transform: rotate(-90deg);
+    }
+  }
+  .sub-menu-items a {
+    font-size: $font-size-social;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: 2px;
+    display: block;
+    border: 1px solid transparent;
+    padding: 10px 4px;
+    transition: border 0.5s ease-in-out;
+    &:hover {
+      border: 1px solid $color_line;
+    }
+  }
+}
+.sub-sub-header-menu {
+  position: absolute;
+  top: -17px;
+  left: 173px;
+  background-color: $background_color;
+  padding: 13px;
+  min-width: 180px;
+  z-index: 5;
+  .sub-sub-menu-items {
+    position: relative;
+    color: $color_white;
+  }
+}
+.hide {
+  display: none;
+}
+.burger-menu {
+  display: none;
+}
+.decor-line {
+  width: 100%;
+  height: 7px;
+  border-top: 0.25px solid $color_line;
+  border-bottom: 0.25px solid $color_line;
+}
+.arrow-add::after {
+  content: "";
+  width: $font-size-header;
+  height: $font-size-header;
+  position: absolute;
+  top: 2px;
+  background-image: url(/wordpress/wp-content/themes/jewelry-3/assets/images/arrow.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: rotate(-90deg);
+  right: -$font-size-header - 10px;
+}
+.arrow-add.arrow-active::after {
+  transform: rotate(90deg);
+}
+
+/*--Header style--*/
+/*--Footer style--*/
+.social-wrapper {
+  max-width: 300px;
+  margin-left: 60px;
+}
+.header-socila {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .nav-items a {
+    font-size: $font-size-social;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: 1.5px;
+  }
+}
+/*--Footer style--*/
+/*--Contetn style--*/
+.content a {
+  text-decoration: underline;
+  color: $color_link;
+}
+.content a:hover {
+  color: $color_link;
+  text-decoration: none;
+}
+h1 {
+  font-size: $font-size-text + 29px;
+  padding: ($font-size-text + 25px) 0;
+  color: $color_heading;
+}
+h2 {
+  font-size: $font-size-text + 19px;
+  padding: ($font-size-text + 19px) 0;
+  color: $color_heading;
+}
+h3 {
+  font-size: $font-size-text + 9px;
+  padding: ($font-size-text + 15px) 0;
+  color: $color_heading;
+}
+h4 {
+  font-size: $font-size-text + 5px;
+  padding: ($font-size-text + 10px) 0;
+  color: $color_heading;
+}
+h5 {
+  font-size: $font-size-text + 2px;
+  padding: ($font-size-text + 10px) 0;
+  color: $color_heading;
+}
+h6 {
+  font-size: $font-size-text - 2px;
+  padding: ($font-size-text - 2px) 0;
+  color: $color_heading;
+}
+p {
+  font-family: $lato_regular;
+  white-space: normal;
+  color: $color_text;
+  font-size: $font-size-text;
+  line-height: $font-size-text * 1.4;
+  letter-spacing: 0.2px;
+}
+q {
+  white-space: normal;
+  font-family: $playfair_regular;
+  font-size: $font-size-qoute;
+  line-height: $font-size-qoute * 1.4;
+  letter-spacing: 0.1px;
+}
+.content-text {
+  :first-child {
+    font-family: $playfair_regular;
+  }
+  &.text-img {
+    p {
+      margin-bottom: 10px;
+    }
+  }
+}
+.content-head {
+  text-align: center;
+  margin-bottom: 8px;
+  margin-top: 10px;
+}
+.border_marge {
+  margin: 45px 0 10px;
+}
+
+.img-cover {
+  max-width: 315px;
+  max-height: 206px;
+  overflow: hidden;
+
+  &.align_left {
+    float: left;
+    margin: 0px 40px 15px 0px;
+    img {
+      object-position: -50px -83px;
+      filter: contrast(86%) saturate(205%) brightness(106%);
+    }
+  }
+  &.align_rigth {
+    float: right;
+    margin: 0px 0px 0px 40px;
+    img {
+      filter: contrast(87%) brightness(117%);
+    }
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: none;
+  }
+}
+.quotes_first {
+  margin: 20px 0;
+  .qoutes_wrapper {
+    margin-left: 9%;
+    padding-left: 30px;
+    border-left: 1px solid $color_line;
+    q {
+      color: $color_link;
+    }
+    p {
+      margin-top: 15px;
+    }
+  }
+}
+.quotes_second {
+  margin: 20px 0;
+  .qoutes-background {
+    margin-left: 9%;
+    background-color: $background_color;
+    color: $color_white;
+    padding: 30px 0;
+    .qoutes_wrapper {
+      margin-left: 12%;
+      padding-left: 20px;
+      border-left: 1px solid $color_white;
+      position: relative;
+      &::before {
+        content: "\201c";
+        font-size: 100px;
+        position: absolute;
+        top: -5%;
+        left: -9%;
+        font-family: $lato_regular;
+      }
+      q::before,
+      q::after {
+        content: "";
+      }
+      p {
+        margin-top: 15px;
+        color: $color_white;
+      }
+    }
+  }
+}
+.table-wrapper {
+  margin-bottom: 70px;
+  table {
+    border: 1px solid $color_line;
+    width: 100%;
+    tr:first-child {
+      font-family: $playfair_regular;
+      font-size: 17px;
+      td {
+        padding: 25px 18px;
+      }
+    }
+    tr {
+      border: 1px solid $color_line;
+      td {
+        padding: 25px 18px;
+        border: 1px solid $color_line;
+        font-family: $lato_regular;
+      }
+    }
+  }
+}
+/*--Contetn style--*/
+
+/*--Contetn blog-page style--*/
+.decration-wrap {
+  &.header-mage {
+    padding: 50px 0;
+  }
+  position: relative;
+  max-width: 300px;
+  margin: 0 auto;
+  .special-decor-line {
+    max-width: 300px;
+    margin: 0 auto;
+    img {
+      width: 94px;
+      height: 47px;
+      display: block;
+      margin: 0 auto;
+    }
+    &::after,
+    &::before {
+      content: "";
+      top: 50%;
+      position: absolute;
+      width: 82px;
+      height: 1px;
+      background-color: $color-decoration-line;
+    }
+    &::after {
+      right: 0;
+    }
+  }
+}
+
+.post-wrap {
+  &.main-post {
+    background-color: $background_color_post;
+    h2 {
+      text-decoration: underline;
+    }
+    .post-content {
+      padding: 0 50px;
+    }
+  }
+  .img-post-wrap {
+    max-width: 100%;
+    max-height: 254px;
+    overflow: hidden;
+    margin-bottom: 23px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 0 -70px;
+      filter: brightness(105%) saturate(200%);
+    }
+  }
+  .post-content {
+    .time-wrap {
+      font-family: $lato_regular-ital;
+      font-size: 14px;
+      color: $color_text;
+    }
+    .read-post {
+      font-family: $playfair_regular;
+      font-size: $font-size-social;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: $color_white;
+      background-color: $background_color;
+      padding: 15px 45px;
+      margin: 25px 0;
+      transition: background-color 0.5s ease-in-out;
+      &:hover {
+        background-color: $color_second;
+      }
+      &:active {
+        color: $color_heading;
+      }
+    }
+  }
+}
+.pagination-wrap {
+  padding-bottom: 70px;
+  display: inline-block;
+  .pagination-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 30px;
+    .pagination-items {
+      font-family: $playfair_regular;
+      font-size: $font-size-text;
+      padding: 15px;
+      &:hover {
+        background-color: $background_color_post;
+      }
+    }
+    &::before {
+      content: "";
+      width: $font-size-text;
+      height: $font-size-text;
+      position: absolute;
+      top: 40%;
+      left: 0;
+      background-image: url(/wordpress/wp-content/themes/jewelry-3/assets/images/arrow.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    &::after {
+      content: "";
+      width: $font-size-text;
+      height: $font-size-text;
+      position: absolute;
+      top: 40%;
+      right: 0;
+      background-image: url(/wordpress/wp-content/themes/jewelry-3/assets/images/arrow.png);
+      transform: rotate(180deg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+.post-wrap {
+  &.read-post {
+    h1 {
+      white-space: normal;
+      line-height: ($font-size-text + 29px) * 1.4;
+      text-align: center;
+    }
+    .time-wrap,
+    p {
+      padding: 0 0 25px 0;
+    }
+  }
+}
+.post-mover-wrap {
+  margin: 50px 0 140px;
+  .post-mover {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .left-move,
+    .right-move {
+      display: flex;
+      justify-content: space-around;
+      .preview-button,
+      .next-button {
+        width: 45px;
+        height: 75px;
+        background-color: $background_color;
+        background-image: url(/wordpress/wp-content/themes/jewelry-3/assets/images/arrow_white.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 28px 28px;
+        &:hover {
+          background-color: $color_second;
+        }
+      }
+      .discr-preview,
+      .discr-next {
+        max-width: 250px;
+        h5 {
+          padding: 0;
+          white-space: normal;
+          font-family: $playfair_regular;
+          font-size: 17px;
+        }
+        span {
+          font-family: $lato_regular;
+          color: $color_text;
+          font-size: $font-size-text - 1px;
+          padding-bottom: 10px;
+          display: block;
+        }
+      }
+      .discr-preview {
+        padding: 5px 10px 0 30px;
+      }
+      .discr-next {
+        padding: 5px 30px 0 10px;
+        text-align: right;
+      }
+    }
+    .right-move {
+      .next-button {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+/*--Contetn blog-page style--*/
