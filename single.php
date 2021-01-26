@@ -6,13 +6,13 @@
                <div class="content-wrapper content-width">
                    <div class="decration-wrap header-mage">
                        <div class="special-decor-line">
-                           <img src="/assets/images/spec-decor.png" alt="decoration">
+                           <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/spec-decor.png" alt="decoration">
                        </div>
                    </div>
                    <div class="post-wrap read-post">
                        <h1>Small Business Saturday: Gifts Of Grace Design</h1>
                        <div class="img-post-wrap">
-                           <img src="/assets/images/img_post_2.png" alt="img-post_2">
+                           <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/img_post_2.png" alt="img-post_2">
                        </div>
                        <div class="post-content">
                            <div class="time-wrap"><span class="time-poblish">4 August</span>, by Motopress</div>
@@ -57,26 +57,7 @@
                </div>
            </div>
            <!--Content end section-->
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', get_post_type() );
-
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'jewelry-3' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'jewelry-3' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
+		
 
 	</main><!-- #main -->
 

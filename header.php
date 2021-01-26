@@ -32,11 +32,11 @@
                   <li class="nav-items arrow-add">
                       <a class="drop-down" href="#">blocks</a>
                       <ul class="sub-header-menu hide">
-                          <li class="sub-menu-items"><a href="#">typography</a></li>
+                          <li class="sub-menu-items"><a href="wordpress/sample-page/">typography</a></li>
                           <li class="sub-menu-items arrow-sub">
                               <a class="drop-down" href="#">simple</a>
                               <ul class="sub-sub-header-menu hide">
-                                  <li class="sub-sub-menu-items"><a href="#">typography</a></li>
+                                  <li class="sub-sub-menu-items"><a href="wordpress/sample-page/">typography</a></li>
                                   <li class="sub-sub-menu-items"><a href="#">simple</a></li>
                                   <li class="sub-sub-menu-items"><a href="#">advanced</a></li>
                                   <li class="sub-sub-menu-items"><a href="#">simple</a></li>
