@@ -9,30 +9,26 @@
                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/spec-decor.png" alt="decoration">
                        </div>
                    </div>
-                   <div class="post-wrap read-post">
-                       <h1>Small Business Saturday: Gifts Of Grace Design</h1>
-                       <div class="img-post-wrap">
-                           <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/img_post_2.png" alt="img-post_2">
-                       </div>
-                       <div class="post-content">
-                           <div class="time-wrap"><span class="time-poblish">4 August</span>, by Motopress</div>
-                           <div class="content-text">
-                               <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque veritatem laudantium, totam rem
-                                   aperiam, eaque ipsa quae ab illo inventore veritatiset quasi architecto beatae voluptatem accusantium doloremque
-                                   laudantium, totam rem aperiam, mued ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                   doloremque veritatem laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatiset quasi architecto beatae
-                                   voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae. Sed ut perspiciatis unde omnis
-                                   iste natus error sit voluptatem accusantium doloremque veritatem laudantium, totam rem aperiam, eaque ipsa quae ab illo
-                                   inventore veritatiset quasi architecto beatae voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque
-                                   ipsa quae.
-                               </p>
-                               <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque veritatem laudantium, totam rem
-                                  aperiam, eaque ipsa quae ab illo inventore veritatiset quasi architecto beatae voluptatem accusantium doloremque
-                                  laudantium, totam rem aperiam.
-                               </p>
-                           </div>
-                       </div>
-                   </div>
+                   <?php if( have_posts() ){
+                	  while( have_posts() ){ the_post();?>
+                   
+                    <div class="post-wrap read-post">
+                        <h1><?php the_title();?></h1>
+                        <div class="img-post-wrap">
+                            <img src="<?php echo catch_that_image() ?>" title="<?php the_title();?>" alt="<?php the_title();?>">
+                        </div>
+                        <div class="post-content">
+                            <div class="time-wrap"><span class="time-poblish"><?php echo get_the_date('j F'); ?></span>, by <?php the_author(); ?></div>
+                            <div class="content-text">
+                                <?php add_filter('the_content','htm_image_content_filter',11); 
+                                    the_content();
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+                   <?php }} else {?>
+                   <?php } ?>
+                    
                    <div class="decor-line border_marge"></div>
                        <div class="post-mover-wrap">
                            <div class="post-mover">

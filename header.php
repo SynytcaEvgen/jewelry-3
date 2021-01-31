@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jewelry-3</title>
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/favicon.png" type="image/png">
-    <!--<link rel="stylesheet" href="/assets/css/style.css">
-    <script src="assets/js/index.js"></script>-->
 </head>
 <?php wp_head(); ?>
 <body>
@@ -14,10 +12,20 @@
     <header class="header_wrapper">
       <div class="header-content content-head-width">
           <div class="logo">
-            <a href="#">
-             <span class="logo_first">D</span>
-             <span class="logo_second">J</span>
-            </a>   
+          <?php if( is_front_page() ){ ?>
+                <a>
+                   <span class="logo_first">D</span>
+                   <span class="logo_second">J</span>
+                </a> 
+              <?php 
+              }
+              else { ?>
+              	 <a href="<?php echo home_url();?>">
+                   <span class="logo_first">D</span>
+                   <span class="logo_second">J</span>
+                 </a> 
+            <?php  } ?>
+             
           </div>
           <div class="burger-menu">
               <span></span>

@@ -28,11 +28,26 @@
                 </div>
             </div>
             <div class="decor-line border_marge"></div>
-            
+            <?php $args = array(
+               'posts_per_page' => 5,
+               'offset' => 1,
+	           'orderby' => 'data'
+                );
+                
+                $query = new WP_Query( $args );
+                   
+                // Цикл
+                if ( $query->have_posts() ) {
+                	while ( $query->have_posts() ) {
+                		$query->the_post();
+                		echo '<h5>' . get_the_title() . '</h5>';
+                	}
+                } else {
+                	echo '<h2> Empty post</h2>';
+                }
+                wp_reset_postdata();?>
 			<?php
-                // проверяем есть ли посты в глобальном запросе - переменная $wp_query
                 if( have_posts() ){
-                	// перебираем все имеющиеся посты и выводим их
                 	while( have_posts() ){
                 		the_post();
                         ?>
@@ -44,18 +59,25 @@
                           <div class="post-wrap">
                               <?php if( catch_that_image() ){ ?>
                             <div class="img-post-wrap">
-                                <img src="<?php echo catch_that_image() ?>" alt="img-post_2">
+                                <img src="<?php echo catch_that_image() ?>" title="<?php the_title();?>" alt="<?php the_title();?>">
                             </div>
                             <?php
                               } else{
 
                               } ?>
                             <div class="post-content">
-                                <div class="time-wrap"><span class="time-publish"> <?php jewelry_3_posted_on(); ?> </span>, by <?php the_author(); ?></div>
+                                <div class="time-wrap"><span class="time-publish"> <?php echo get_the_date('j F'); ?> </span>, by <?php the_author(); ?></div>
                                 <div class="content-text">
                                     <h2><?php the_title(); ?></h2>
-                                    <?php add_filter('the_content','htm_image_content_filter',11); ?>
-                                    <?php the_content(); ?>
+                                    <?php  
+                                     add_filter( 'excerpt_length', function(){
+                                      	return 35;
+                                      } );
+                                      add_filter('excerpt_more', function($more) {
+                                      	return '...';
+                                      });
+                                      the_excerpt();
+                                    ?>
                                 </div>
                                 <a href="<?php the_permalink(); ?>"><button class="read-post">read post</button></a>
                             </div>
